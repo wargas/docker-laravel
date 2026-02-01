@@ -2,6 +2,7 @@ FROM composer:2 AS composer
 
 FROM dunglas/frankenphp:latest AS fraken
 
+#EVITAR QUE O HEALTHCHEK ORIGINAL DO FRANKEN TENTE REINICIAR QUANDO ACONTECE FALHA
 HEALTHCHECK NONE
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
