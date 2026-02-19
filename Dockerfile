@@ -6,6 +6,10 @@ HEALTHCHECK NONE
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
+RUN composer global require laravel/installer
+
+ENV PATH="/config/composer/vendor/bin:${PATH}"
+
 WORKDIR /app
 
 # Instalar extensões necessárias para Laravel
