@@ -23,4 +23,4 @@ RUN install-php-extensions \
 
 RUN apt update -y
 
-RUN apt install iputils-ping -y
+RUN apt install iputils-ping unzip -y
