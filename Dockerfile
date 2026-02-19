@@ -24,3 +24,7 @@ RUN install-php-extensions \
 RUN apt update -y
 
 RUN apt install iputils-ping unzip -y
+
+RUN composer global require laravel/installer
+
+ENV PATH="/config/composer/vendor/bin:${PATH}"
